@@ -1,0 +1,34 @@
+{
+  "name": "@cherum/widget-react",
+  "version": "0.2.0",
+  "description": "Embeddable cross-chain fan-out swap widget for React — send to many wallets across chains and tokens in one signature. Multisend, disperse and batch payments without custody; partner fees built in.",
+  "keywords": ["cherum", "swap", "cross-chain", "bridge", "multi-chain", "widget", "react", "defi", "fan-out", "multisend", "disperse", "batch-payments", "payouts", "payments", "ethereum", "evm", "web3"],
+  "repository": { "type": "git", "url": "git+https://github.com/cherum-io/widget-react.git" },
+  "homepage": "https://docs.cherum.io",
+  "bugs": { "email": "support@cherum.io" },
+  "license": "MIT",
+  "author": "Cherum <support@cherum.io>",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.cjs.json && node rename-cjs.mjs"
+  },
+  "peerDependencies": {
+    "react": ">=17"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.0",
+    "typescript": "^5.5.0"
+  }
+}
